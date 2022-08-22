@@ -4,7 +4,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-@@ -13,46 +14,101 @@
+import org.launchcode.techjobs.oo.*;
+import static org.junit.Assert.*;
+/**
+ * Created by LaunchCode
+ */
 @RunWith(JUnit4.class)
 public class JobTest {
 
@@ -57,7 +61,8 @@ public class JobTest {
 
         @Test
         public void testJobsForEquality() {
-            Job equalTestJobOne = new Job("Product tester", new Employer("ACME"),
+            Job equalTestJobOne;
+            equalTestJobOne = new Job("Product tester", new Employer("ACME"),
                     Job equalTestJobOne = new Job();
             Job equalTestJobTwo = new Job();
 
@@ -66,7 +71,7 @@ public class JobTest {
 
         @Test
         public void testToStringStartsAndEndsWithNewLine() {
-            testJobFull = new Job("Product tester", new Employer("ACME"),
+            testJobFull = new Job ("Product tester", new Employer("ACME"),
                     new Location("Desert"), new PositionType("Quality control"),
                     new CoreCompetency("Persistence"));
             Job equalTestJobTwo = new Job("Product tester", new Employer("ACME"),
